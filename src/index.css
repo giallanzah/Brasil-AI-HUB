@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* ── Roxo / Índigo — cor primária ── */
+  --gt-50:   #f5f4ff;   /* fundo do mapa (lavanda muito claro) */
+  --gt-100:  #e8e6ff;   /* fill de salas workspace */
+  --gt-200:  #c8c4f8;   /* texto muted no HUD */
+  --gt-300:  #9d97f0;   /* bordas de salas, subtítulos */
+  --gt-400:  #6c63e8;   /* COR PRIMÁRIA — navbar, botões, avatar local */
+  --gt-500:  #4f46d4;   /* hover de botões */
+  --gt-600:  #3730a3;   /* active, pressed */
+  --gt-900:  #1a1732;   /* fundo navbar, painel HUD, fundo dark */
+
+  /* ── Teal — online, confirmações ── */
+  --gt-teal-light: #e6faf5;
+  --gt-teal-mid:   #5dcaa5;
+  --gt-teal-main:  #22c55e;   /* status online */
+  --gt-teal-dark:  #16a34a;
+
+  /* ── Âmbar — lounge, ausente ── */
+  --gt-amber-light: #fff9e6;
+  --gt-amber-mid:   #fde68a;
+  --gt-amber-main:  #f5a623;
+  --gt-amber-dark:  #d97706;   /* status away */
+
+  /* ── Coral — conferência, reunião ── */
+  --gt-coral-light: #fff0f0;
+  --gt-coral-mid:   #fecaca;
+  --gt-coral-main:  #f87171;
+  --gt-coral-dark:  #dc2626;   /* cadeiras conf, status meeting */
+
+  /* ── Verde natural — outdoor, plantas ── */
+  --gt-green-outdoor: #8bc34a;
+  --gt-green-tree:    #33691e;
+  --gt-green-shadow:  #1b5e20;
+  --gt-trunk:         #795548;
+
+  /* ── Neutros — piso, paredes, móveis ── */
+  --gt-floor:    #e8d5b0;   /* piso corredor bege */
+  --gt-wall:     #1e293b;   /* paredes */
+  --gt-desk:     #795548;   /* mesa de trabalho */
+  --gt-desk-drk: #4e342e;   /* mesa premium */
+  --gt-monitor:  #1a1a2e;   /* monitor */
+  --gt-shelf:    #6d4c41;   /* estante */
+
+  /* ── Status do avatar ── */
+  --status-online:  #22c55e;
+  --status-meeting: #f59e0b;
+  --status-focus:   #3b82f6;
+  --status-away:    #94a3b8;
+}
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
+
+  /* Gather Town Colors */
+  --color-gt-50: var(--gt-50);
+  --color-gt-100: var(--gt-100);
+  --color-gt-200: var(--gt-200);
+  --color-gt-300: var(--gt-300);
+  --color-gt-400: var(--gt-400);
+  --color-gt-500: var(--gt-500);
+  --color-gt-600: var(--gt-600);
+  --color-gt-900: var(--gt-900);
+
+  --color-gt-teal: var(--gt-teal-main);
+  --color-gt-teal-main: var(--gt-teal-main);
+  --color-gt-teal-dark: var(--gt-teal-dark);
+  --color-gt-teal-light: var(--gt-teal-light);
+
+  --color-gt-amber: var(--gt-amber-main);
+  --color-gt-amber-main: var(--gt-amber-main);
+  --color-gt-amber-dark: var(--gt-amber-dark);
+  --color-gt-amber-light: var(--gt-amber-light);
+
+  --color-gt-coral: var(--gt-coral-main);
+  --color-gt-coral-main: var(--gt-coral-main);
+  --color-gt-coral-dark: var(--gt-coral-dark);
+  --color-gt-coral-light: var(--gt-coral-light);
+
+  --color-gt-green-outdoor: var(--gt-green-outdoor);
+  --color-gt-green-tree: var(--gt-green-tree);
+  --color-gt-green-shadow: var(--gt-green-shadow);
+
+  --color-gold: #f5c000;
+  --color-gold-light: #fce277;
+}
+
+@layer base {
+  body {
+    @apply bg-[#1a1732] text-[#e8e6ff] antialiased;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

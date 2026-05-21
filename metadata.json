@@ -1,0 +1,11 @@
+{
+  "name": "Brasil Startups Hub",
+  "description": "Plataforma de escritório virtual 2D colaborativo para startups, com chat por proximidade e integração com Google Meet.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

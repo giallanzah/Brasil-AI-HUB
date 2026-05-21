@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "status": { "type": "string", "enum": ["online", "absent", "in-meeting"] },
+        "lastSeen": { "type": "string", "format": "date-time" }
+      },
+      "required": ["displayName", "lastSeen"]
+    },
+    "Presence": {
+      "title": "Live Presence",
+      "description": "Real-time position and state of a user on the map",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "scene": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "x", "y", "scene", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profile collection"
+    },
+    "presence/{userId}": {
+      "schema": "Presence",
+      "description": "Real-time presence data"
+    }
+  }
+}
